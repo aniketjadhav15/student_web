@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teacher Profile</title>
+    <!-- Include Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='student.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            color: #2e2d2d;
+        }
+        
+        .profile-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 100px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logout-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center profile-box">
+                <img src="/static/logo.png" alt="Profile Logo" class="profile-logo">
+                <h2>Teacher's Profile</h2>
+                <p>Options</p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="teacher_profile.php">My Profile</a></li>
+                            <li class="list-group-item"><a href="/templates/student/registered_students.php">Registered Students</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="logout.php" class="btn btn-primary logout-btn">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
